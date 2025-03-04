@@ -35,13 +35,13 @@ except:
 class YoutubeDownload:
   def __init__(self, root):
     #Version Setup
-    self.ver = "v0.0.D1"
+    self.ver = "v0.0.D2"
     self.verlong = "v0.0 Development Stage 1"
 
     #Base Window Setup
     self.root = root
-    self.root.title("M4X4's Youtube Video Downloader")
-    self.root.geometry("600x300")
+    self.root.title(f"That Youtube Downloader | {self.ver}")
+    self.root.geometry("700x300")
     pywinstyles.apply_style(root, "acrylic")
     sv_ttk.set_theme("dark")
 
@@ -92,11 +92,11 @@ class YoutubeDownload:
     InfoFrame = ttk.Frame(root, style="MainFrames.TFrame")
     InfoFrame.pack(fill=tk.X, padx=10, pady=5)
     self.ViewsLabel = ttk.Label(InfoFrame, textvariable=self.views, background="#101010")
-    self.ViewsLabel.grid(row=0, column=0, padx=5)
+    self.ViewsLabel.grid(row=0, column=0, padx=5, sticky="w")
     self.LengthLabel = ttk.Label(InfoFrame, textvariable=self.length, background="#101010")
-    self.LengthLabel.grid(row=0, column=1, padx=5)
+    self.LengthLabel.grid(row=1, column=0, padx=5, sticky="w")
     self.DateLabel = ttk.Label(InfoFrame, textvariable=self.date, background="#101010")
-    self.DateLabel.grid(row=0, column=2, padx=5)
+    self.DateLabel.grid(row=2, column=0, padx=5, sticky="w")
 
     #Download buttons Frame
     ButtonFrame = ttk.Frame(root, style="MainFrames.TFrame")

@@ -9,7 +9,7 @@ def fetch(link):
     "obj": yt,
     "title": str(yt.title).replace("!","").replace(".",""),
     "thumb": yt.thumbnail_url,
-    "channel": yt.channel_id,
+    "channel": yt.author,
     "views": yt.views,
     "length": yt.length,
     "date": yt.publish_date
