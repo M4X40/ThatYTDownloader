@@ -36,7 +36,7 @@ class YoutubeDownload:
   def __init__(self, root):
     #Version Setup
     self.ver = "v0.0.D2"
-    self.verlong = "v0.0 Development Stage 1"
+    self.verlong = "v0.0 Development Stage 2"
 
     #Base Window Setup
     self.root = root
