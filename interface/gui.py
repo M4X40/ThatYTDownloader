@@ -142,14 +142,14 @@ class YoutubeDownload:
   def GetInfo(self):
     print(self.link.get())
     data = fetch(self.link.get())
-    self.title.set(f"{data["title"]}")
-    self.thumb.set(f"{data["thumb"]}")
+    self.title.set(f"{data['title']}")
+    self.thumb.set(f"{data['thumb']}")
     self.UpdateThumbnail()
-    self.channel.set(f"{data["channel"]}")
-    self.views.set(f"Views: {data["views"]}")
-    self.length.set(f"Length: {int(data["length"]) // 60}:{int(data["length"] % 60)}")
+    self.channel.set(f"{data['channel']}")
+    self.views.set(f"Views: {data['views']}")
+    self.length.set(f"Length: {int(data['length']) // 60}:{int(data['length'] % 60)}")
     
-    self.date.set(f"Date Uploaded: {datetime.fromisoformat(str(data["date"])).strftime("%B %d, %Y at %I:%M %p")}")
+    self.date.set(f"Date Uploaded: {datetime.fromisoformat(str(data['date'])).strftime('%B %d, %Y at %I:%M %p')}")
 
 def MakeGUI():
   root = tk.Tk()
